@@ -1,38 +1,80 @@
-# ibori-fe
+# 👶 아이보리
 
-## seoul contest ibori page frontend code space
+**맞벌이 가정을 위한 영유아 의료 통합 관리 서비스, 아이보리**
 
-## **🎯 Git Convention**
+**2026.05 ~ 2026.06**
 
-- 🎉 **Start:** Start New Project [:tada:]
-- ✨ **Feat:** 새로운 기능을 추가 [:sparkles:]
-- 🐛 **Fix:** 버그 수정 [:bug:]
-- 🎨 **Design:** CSS 등 사용자 UI 디자인 변경 [:art:]
-- ♻️ **Refactor:** 코드 리팩토링 [:recycle:]
-- 🔧 **Settings:** Changing configuration files [:wrench:]
-- 🗃️ **Comment:** 필요한 주석 추가 및 변경 [:card_file_box:]
-- ➕ **Dependency/Plugin:** Add a dependency/plugin [:heavy_plus_sign:]
-- 📝 **Docs:** 문서 수정 [:memo:]
-- 🔀 **Merge:** Merge branches [:twisted_rightwards_arrows:]
-- 🚀 **Deploy:** Deploying stuff [:rocket:]
-- 🚚 **Rename:** 파일 혹은 폴더명을 수정하거나 옮기는 작업만인 경우 [:truck:]
-- 🔥 **Remove:** 파일을 삭제하는 작업만 수행한 경우 [:fire:]
-- ⏪️ **Revert:** 전 버전으로 롤백 [:rewind:]
+Project Link : ibori.site
 
-## 🌲 Branch Convention
+---
 
-- **`main`**: 배포 가능한 브랜치, 항상 배포 가능한 상태를 유지
-- **`develop`**: 다음 버전을 위한 개발 브랜치, 팀원들의 작업 결과물이 모이는 '중심점'
-- **`ui/#이슈번호/명칭`**: 화면 UI 구현이나 스타일링 작업을 할 때 사용
-  - _예: `ui/#12/login-form`_
-- **`api/#이슈번호/명칭`**: 데이터 통신, API 연동, 비즈니스 로직 구현 시 사용
-  - _예: `api/#45/fetch-user-profile`_
+## 💡 프로젝트 요약
 
-## 🌊 Flow
+### 해결하고자 하는 사회 문제
 
-1. Issue 생성
-2. 최신 상태의 **`develop`** 에서 새 브랜치 생성
-3. 작업 완료 후 **`develop`**으로 Pull Request
-4. 팀원들에게 리뷰 요청
-5. 리뷰 후 작업자가 **`develop`** 으로 병합
-6. 병합 후 작업자가 해당 브랜치 삭제
+맞벌이 가정에서는 부모뿐만 아니라 조부모, 보호자가 번갈아 아이를 돌보는 경우가 많아 진료 기록과 아이의 건강 상태가 단절되기 쉽습니다.
+
+또한 병원 방문 전 아이의 증상을 체계적으로 정리하기 어렵고, 진료 과정에서 필요한 질문을 놓치는 경우가 많아 의료진과 보호자 간 원활한 의사소통에도 어려움이 발생합니다.
+
+아이보리는 AI를 활용하여 진료 정보와 건강 기록을 통합 관리하고, 보호자 모두가 동일한 정보를 공유할 수 있는 환경을 제공합니다.
+
+---
+
+### 활용한 핵심 기술
+
+**Spring Boot · React · FastAPI · OCI · PostgreSQL · Redis · Random Forest · GPT-4o API · CODEF API · 공공데이터 API**
+
+---
+
+### 기대하는 사회적 임팩트
+
+AI를 활용해 영유아의 건강 기록과 진료 정보를 체계적으로 관리하고, 보호자 간 정보 공유를 지원하여 의료 정보 단절 문제를 해결합니다.
+
+또한 진료 전 AI 기반 맞춤 질문 생성과 병원 혼잡도 예측 기능을 통해 보호자의 병원 이용 편의성을 높이고, 보다 효율적인 의료 서비스를 제공하는 것을 목표로 합니다.
+
+---
+
+## ✨ Key Features
+
+### 1. 가족 간 자녀별 진료내역 및 투약정보 조회
+
+- CODEF API를 활용한 자녀 진료내역 조회
+- 자녀별 진료내역 및 투약정보 조회 기능 구현
+- 가족 구성원 간 의료정보 공유
+
+### 2. 우리 동네 소아과 혼잡도 예측
+
+- 요일, 날씨, 행정동 정보를 기반으로 소아과 혼잡도 예측 모델 개발
+- Random Forest 알고리즘 활용
+- 여유 / 보통 / 혼잡 / 매우혼잡의 4단계 혼잡도 제공
+
+### 3. 야간 진료 소아과 조회
+
+- 서울시 공공데이터를 활용한 야간 진료 소아과 조회 기능 구현
+- 사용자 위치 기반 병원 검색 및 필터링
+
+### 4. AI 진료 내용 자동 요약
+
+- GPT-4o API를 활용하여 음성 정보를 텍스트로 변환(STT)
+- 진료 내용을 AI가 자동으로 요약하여 보호자가 쉽게 확인 가능하도록 구현
+
+### 5. LLM 기반 아이 맞춤 진료 질문 생성
+
+- 진료 전 사전 문진을 통해 아이의 증상과 상태를 입력
+- 입력 정보를 기반으로 LLM이 진료 시 필요한 질문을 자동 생성
+- 보호자가 놓칠 수 있는 질문을 미리 준비할 수 있도록 지원
+
+<img width="1924" height="1082" alt="표지_최종" src="https://github.com/user-attachments/assets/c000fc1b-b6d0-46c3-8033-4f56a52cc7ba" />
+<img width="1920" height="1080" alt="제안 배경_2" src="https://github.com/user-attachments/assets/658a1219-2418-4ef6-8e16-6ac663f496a1" />
+<img width="1920" height="1080" alt="제안 배경_2-3" src="https://github.com/user-attachments/assets/74710337-6479-43bc-957d-6b858d475a0e" />
+<img width="1920" height="1080" alt="제안 배경_2-1" src="https://github.com/user-attachments/assets/5c0be4f1-c624-4de1-940b-a2ec27f1fe6a" />
+<img width="1920" height="1080" alt="제안 배경_2-2" src="https://github.com/user-attachments/assets/df1fd3f8-5be1-4218-a1e5-97f12664f65f" />
+<img width="1920" height="1080" alt="제안 배경_2-6" src="https://github.com/user-attachments/assets/f9f70bf4-7c20-4c93-a75e-ed150cdad58a" />
+<img width="1920" height="1080" alt="제안 배경_2-5" src="https://github.com/user-attachments/assets/f1c02360-a31f-4356-8b54-e4c5b1014d18" />
+<img width="1920" height="1080" alt="제안 배경_2-8" src="https://github.com/user-attachments/assets/c2d56a95-1c0e-474b-a74d-7e985baae916" />
+<img width="1920" height="1080" alt="제안 배경_2-7" src="https://github.com/user-attachments/assets/e8b7c1cf-e648-415e-88a7-291f842b6ebe" />
+<img width="1920" height="1080" alt="제안 배경_2-4" src="https://github.com/user-attachments/assets/0eb4fd07-58c2-4c7d-b5cc-47988e9ba893" />
+<img width="1920" height="1080" alt="제안 배경_2-2" src="https://github.com/user-attachments/assets/96b2ed2e-46df-4394-907a-1d65b45e101e" />
+<img width="1920" height="1080" alt="제안 배경_2-5" src="https://github.com/user-attachments/assets/6a4ce630-49e4-45b9-ae40-51c2e0a1549f" />
+<img width="1920" height="1080" alt="제안 배경_2-8" src="https://github.com/user-attachments/assets/4fa91370-3a1a-4c49-a751-818ef3e72b48" />
+
